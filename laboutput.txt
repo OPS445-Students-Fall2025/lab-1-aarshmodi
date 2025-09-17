@@ -1,17 +1,26 @@
 test_0 (__main__.lab1a)
-[Lab 1] - [Investigation 3] - [Part 2] - printing - Test for file creation: ./lab1a.py ... FAIL
+[Lab 1] - [Investigation 3] - [Part 2] - printing - Test for file creation: ./lab1a.py ... ok
+test_a (__main__.lab1a)
+[Lab 1] - [Investigation 3] - [Part 2] - printing - Test for errors running: ./lab1a.py ... /usr/lib/python3.10/subprocess.py:765: ResourceWarning: unclosed file <_io.TextIOWrapper name=3 encoding='UTF-8'>
+  _cleanup()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_a1 (__main__.lab1a)
+[Lab 1] - [Investigation 3] - [Part 2] - printing - Test for correct shebang line: ./lab1a.py ... ok
+test_b (__main__.lab1a)
+[Lab 1] - [Investigation 3] - [Part 2] - printing - Test output for correct output "Hello world": ./lab1a.py ... FAIL
 
 ======================================================================
-FAIL: test_0 (__main__.lab1a)
-[Lab 1] - [Investigation 3] - [Part 2] - printing - Test for file creation: ./lab1a.py
+FAIL: test_b (__main__.lab1a)
+[Lab 1] - [Investigation 3] - [Part 2] - printing - Test output for correct output "Hello world": ./lab1a.py
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/aarsh/ops445/lab1/./CheckLab1.py", line 60, in test_0
-    self.assertTrue(os.path.exists('./lab1a.py'), msg=error_output)
-AssertionError: False is not true : your file cannot be found(HINT: make sure you AND your file are in the correct directory)
+  File "/home/aarsh/ops445/lab1/./CheckLab1.py", line 90, in test_b
+    self.assertEqual(stdout, expected_output, msg=error_output)
+AssertionError: b'Lab 1A test\n' != b'Hello world\n' : output is not correct(HINT: pay attention to uppercase letters, spaces, and symbols)
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.000s
+Ran 4 tests in 0.025s
 
 FAILED (failures=1)
 OPS445 Lab Report - System Information for running ./CheckLab1.py
@@ -23,5 +32,5 @@ OPS445 Lab Report - System Information for running ./CheckLab1.py
     Python version:  3.10.6 (main, May 29 2023, 11:10:38) [GCC 11.3.0]
     OS Platform: linux
     Working Directory: /home/aarsh/ops445/lab1
-    Start at: Wed Sep 17 10:09:04 2025
+    Start at: Wed Sep 17 10:23:19 2025
 =================================================================
